@@ -240,6 +240,7 @@ function analyzeImage(args, fileName, analyzeCallback) {
           url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify' + // eslint-disable-line
             '?api_key=' + args.watsonApiKey +
             '&version=2016-05-20',
+            classifier_ids: ['fighter_jets_1279713883', 'default'],
           headers: {
             'Content-Length': fs.statSync(fileName).size
           },
